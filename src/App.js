@@ -1,81 +1,10 @@
 
-// import './App.css';
-// import React, { Component } from 'react'
-// import NavBar from './components/NavBar';
-// import News from './components/News';
-// // import Sports from './components/Sports';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
-
-
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <Router>
-//       <div>
-//       <NavBar/>
-      
-    
-//        <Routes>
-        
-//           <Route exact path="/" key ="home">            { <News pageSize={6}  country ="in" category ="home"/>    } </Route>
-//            <Route exact path="/sports" key ="sports">    {<News pageSize={6}  country ="in" category ="sports"/>}</Route>
-//  <Route exact path="/entertainment" key ="entertainment">{<News pageSize={6}  country ="in" category ="entertainment"/>}</Route>
-//            <Route exact path="/health" key ="health">    {<News pageSize={6}  country ="in" category ="health"/>}</Route>
-//        <Route exact path="/bussiness" key ="bussiness">  {<News pageSize={6}  country ="in" category ="bussiness"/>}</Route>
-//            <Route exact path="/science" key ="science">  {<News pageSize={6}  country ="in" category ="science"/>}</Route>
-//       <Route exact path="/technology" key ="technology"> {<News pageSize={6}  country ="in" category ="technology"/>}</Route>
-//            <Route exact path="/general" key ="general">  {<News pageSize={6}  country ="in" category ="general"/>}</Route> 
-//         </Routes>
-//       </div>
-//       </Router> 
-//     )
-//   }
-// }
-
-
-// import './App.css';
-// import React, { Component } from 'react'
-// import NavBar from './components/NavBar';
-// import News from './components/News';
-// // import Sports from './components/Sports';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
-
-
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <Router>
-//       <div>
-//       <NavBar/>
-//       {/* <News pageSize={6}  country ="in" category ="home"/> */}
-    
-//        <Routes>
-//           <Route exact path="/" key ="home">            { <News pageSize={6}  country ="in" category ="home"/>    } </Route>
-//            <Route exact path="/sports" key ="sports">    {<News pageSize={6}  country ="in" category ="sports"/>}</Route>
-//  <Route exact path="/entertainment" key ="entertainment">{<News pageSize={6}  country ="in" category ="entertainment"/>}</Route>
-//            <Route exact path="/health" key ="health">    {<News pageSize={6}  country ="in" category ="health"/>}</Route>
-//        <Route exact path="/bussiness" key ="bussiness">  {<News pageSize={6}  country ="in" category ="bussiness"/>}</Route>
-//            <Route exact path="/science" key ="science">  {<News pageSize={6}  country ="in" category ="science"/>}</Route>
-//       <Route exact path="/technology" key ="technology"> {<News pageSize={6}  country ="in" category ="technology"/>}</Route>
-//            <Route exact path="/general" key ="general">  {<News pageSize={6}  country ="in" category ="general"/>}</Route> 
-//         </Routes>
-//       </div>
-//       </Router> 
-//     )
-//   }
-// }
 import React, { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import News from "./components/News";
 import NavBar from './components/NavBar';
+import LoadingBar from 'react-top-loading-bar'
+
 
 
 export default class App extends Component {
@@ -93,6 +22,12 @@ export default class App extends Component {
       <BrowserRouter>
   
         <NavBar />
+        <LoadingBar
+        height={3}
+        color='#f11946'
+        progress={this.state.progress}
+        
+      />
         <Routes>
           <Route
             exact
