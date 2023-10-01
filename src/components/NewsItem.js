@@ -6,9 +6,9 @@ export default class NewsItem extends Component {
     let {title,description,url,newsurl,author,date,source} = this.props;
     return (
 
-      <div className='my-3'>
-        <div className="card" style= {{display:'flex', justifyContent:'flex-end',right:'0',position:'absolute'}} >
-        <span className=" badge rounded-pill bg-dander"> {source}</span>
+      <div className='my-3' >
+        <div className="card" style= {{display:'flex', justifyContent:'center',position:'absolute'}} >
+        <span className=" badge rounded-pill bg-dander" style={{color:'white',background:'#463E9D',position:'absolute',}}> {source}</span>
         </div>
   <img src={url?url:"http://cdn.wionews.com/sites/default/files/2023/07/04/364362-star-sun-earth-coronal-mass-ejection-cme-solar-flare-black-hd-wallpaper-preview.jpg"} className="card-img-top" alt="..."/>
   <div className="card-body">

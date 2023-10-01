@@ -3,7 +3,10 @@ import React, { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import News from "./components/News";
 import NavBar from './components/NavBar';
+
 import LoadingBar from 'react-top-loading-bar'
+import Footer from "./components/Footer"
+// import Footer from "./components/Footer"
 
 
 
@@ -22,6 +25,7 @@ export default class App extends Component {
       <BrowserRouter>
   
         <NavBar />
+    
         <LoadingBar
         height={3}
         color='#f11946'
@@ -142,6 +146,7 @@ export default class App extends Component {
             }
           />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     );
   }

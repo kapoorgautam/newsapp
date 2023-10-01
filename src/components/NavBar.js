@@ -6,16 +6,16 @@ export default class NavBar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark" >
+        <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top" >
   <div className="container-fluid">
-    <Link className="navbar-brand" to="/">Tajja-Khabar</Link>
+    <Link className="navbar-brand" style={{color:'#463E9D', fontWeight:'800'}}to="/">Tajja-Khabar</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item" > <Link className="nav-link" aria-current="page" to="/">Home</Link></li>
-        <li className="nav-item"> <Link className="nav-link" aria-current="page" to="/about">about</Link></li>
+        {/* <li className="nav-item" > <Link className="nav-link" aria-current="page" to="/">Home</Link></li> */}
+        {/* <li className="nav-item"> <Link className="nav-link" aria-current="page" to="/about">about</Link></li> */}
         <li className="nav-item"> <Link className="nav-link" aria-current="page" to="/sports">Sports</Link></li>
         <li className="nav-item"> <Link className="nav-link" aria-current="page" to="/entertainment">Entertainment</Link></li>
         <li className="nav-item"> <Link className="nav-link" aria-current="page" to="/business"> Bussiness </Link></li>
@@ -25,6 +25,8 @@ export default class NavBar extends Component {
         <li className="nav-item"> <Link className="nav-link" aria-current="page" to="/technology"> Technology </Link></li>
       </ul>
     </div>
+    <Link className="navbar-brand" style={{color:'#463E9D',fontWeight:'900',  }} to="/">Contact us</Link>
+
   </div>
 </nav>
       </div>

@@ -48,16 +48,12 @@ export default class News extends Component {
         page : this.state.page+1 ,
     news : parsedData.articles,
     totalResults:parsedData.totalResults,
-  loading :false})
+  loading :true})
   this.props.setProgress(100);
-
-
    }
-
 async componentDidMount(){
   console.log("cdm from newsitem");
   this.UpdateNews();
-
   }
 
 //   handlePrevClick = async () =>{
@@ -90,9 +86,10 @@ async componentDidMount(){
         };
   render() {
     return (
-      <div className="container my-3 ">
-        {/* <span style={{textAlign:"center",marginTop:"3rem" , color:"black"}}>Todays top Headlines are.. </span> */}
-        <h1 style={{textAlign:"center",marginTop:"3rem"}}>TODAYS NEWS Headlines are..</h1>
+      <div className="container">
+     
+      
+        <h2 style={{textAlign:"center",marginTop:"5rem" , marginBottom:'2rem'}}> Today news headlines are..</h2>
        
         {/* {this.state.loading && <Spinner/>} */}
         <InfiniteScroll
@@ -101,6 +98,7 @@ async componentDidMount(){
           hasMore={this.state.news.length !== this.state.totalResults}
           loader={this.state.news.length >=0 ? <Spinner /> : null}
         >
+          <div className="container">
         <div className="row"  >
 
           { this.state.news.map((Element) =>
@@ -109,7 +107,7 @@ async componentDidMount(){
                 title={Element.title?Element.title.slice(0, 45):""}
                 description={Element.description?Element.description.slice(0, 88):""}
                 url={Element.urlToImage}
-                newsurl={Element.url}
+                newsurl={Element.url}   
                 author={Element.author}
                 date={Element.publishedAt}
                 source={Element.source.name}
@@ -117,6 +115,11 @@ async componentDidMount(){
             </div>
            }
           )}
+
+          
+        </div>
+       
+
         </div>
         </InfiniteScroll>
   
